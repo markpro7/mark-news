@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پرائیویسی پالیسی | مارک بریف</title>
+    <style>
+        :root {
+            --red: #e84118;
+            --yellow: #fbc531;
+            --green: #4cd137;
+            --blue: #00a8ff;
+            --font: 'Noto Nastaliq Urdu', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: #f5f6fa;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .header {
+            background: var(--red);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--yellow);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 0 black;
+        }
+
+        .nav {
+            background: var(--green);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            background: white;
+            color: var(--green);
+            transform: scale(1.1);
+        }
+
+        .nav .active {
+            background: var(--yellow);
+            color: black;
+            border: 2px dashed var(--red);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breaking-news {
+            background: var(--blue);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+
+        .policy-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 3px dashed var(--blue);
+        }
+
+        .privacy-icon {
+            font-size: 4rem;
+            color: var(--blue);
+            text-align: center;
+            margin: 1rem 0;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .policy-point {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .policy-point:last-child {
+            border-bottom: none;
+        }
+
+        .privacy-btn {
+            display: block;
+            margin: 2rem auto 0;
+            padding: 1rem 2rem;
+            background: var(--blue);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .privacy-btn:hover {
+            background: var(--yellow);
+            color: black;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background: #2f3640;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">مارک بریف</h1>
+        <p class="tagline">آپ کی پرائیویسی ہماری ترجیح نہیں!</p>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">ہوم</a>
+        <a href="mark-ki-news.html">مارک کی خبریں</a>
+        <a href="about-mark.html">مارک کون ہے؟</a>
+        <a href="privacy.html" class="active">پرائیویسی پالیسی</a>
+    </nav>
+
+    <div class="container">
+        <div class="breaking-news">
+            🔒 ہم آپ کے ڈیٹا کو بے دردی سے استعمال کرتے ہیں! 🔒
+        </div>
+
+        <div class="policy-card">
+            <div class="privacy-icon">👁️</div>
+            
+            <div class="policy-point">
+                <h3 style="color: var(--blue);">1. ہم آپ کا ڈیٹا کیسے استعمال کرتے ہیں؟</h3>
+                <p>ہم آپ کا تمام ڈیٹا (اور آپ کے پڑوسی کا بھی) جمع کرتے ہیں تاکہ مستقبل میں آپ کو مزید فضول اشتہارات دکھا سکیں۔ ہم یہ ڈیٹا اپنے "خصوصی دوستوں" کے ساتھ بھی بانٹتے ہیں!</p>
+            </div>
+
+            <div class="policy-point">
+                <h3 style="color: var(--blue);">2. کوکیز کا استعمال</h3>
+                <p>ہماری ویب سائٹ آپ کے کمپیوٹر پر کوکیز رکھتی ہے - نہ صرف ڈیجیٹل بلکہ اگر ہمیں موقع ملے تو حقیقی بھی! یہ کوکیز ہمیں آپ کی سرگرمیوں پر نظر رکھنے میں مدد دیتی ہیں۔</p>
+            </div>
+
+            <div class="policy-point">
+                <h3 style="color: var(--blue);">3. تھرڈ پارٹی کے ساتھ ڈیٹا شیئرنگ</h3>
+                <p>ہم آپ کا ڈیٹا ہر اس شخص کے ساتھ شیئر کرتے ہیں جو ہم سے مانگتا ہے - چاہے وہ ہمارا اسپانسر ہو، ہمارا دشمن ہو، یا کوئی اجنبی جو بس کھڑکی سے اندر جھانک رہا ہو۔</p>
+            </div>
+
+            <div class="policy-point">
+                <h3 style="color: var(--blue);">4. آپ کے حقوق (جو ہم پورے نہیں کریں گے)</h3>
+                <p>آپ کو قانوناً یہ حقوق حاصل ہیں:<br>
+                - اپنا ڈیٹا دیکھنے کا حق (لیکن ہم آپ کو غلط ڈیٹا دکھائیں گے)<br>
+                - ڈیٹا ڈیلیٹ کرنے کا حق (لیکن ہم صرف آپ کا نام تبدیل کر دیں گے)<br>
+                - شکایت کرنے کا حق (لیکن ہم اسے پڑھیں گے نہیں)</p>
+            </div>
+
+            <button class="privacy-btn" onclick="showPrivacyJoke()">پرائیویسی کا مذاق دیکھیں</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">پرائیویسی پالیسی</a>
+            <a href="disclaimer.html">ڈس کلیمر</a>
+            <a href="sponsors.html">اسپانسرز</a>
+        </div>
+        <p>© 2024 مارک بریف - ہم آپ کی پرائیویسی کی پرواہ نہیں کرتے!</p>
+        <p id="random-joke"></p>
+    </footer>
+
+    <script>
+        function showPrivacyJoke() {
+            alert("🤫 ہماری اصل پرائیویسی پالیسی: 'جو دیکھو سو کھاؤ، جو سنو سو بھول جاؤ!' 🤫");
+        }
+
+        const jokes = [
+            "ہم آپ کے ڈیٹا کو اس طرح محفوظ کرتے ہیں جیسے آپ کا بچہ امتحان میں نقل کرتا ہے!",
+            "پرائیویسی؟ ہم نے سنا تھا کہ یہ کوئی پرانی فلم کا نام ہے!",
+            "نوٹ: یہ پالیسی بھی جھوٹی ہو سکتی ہے!"
+        ];
+        document.getElementById('random-joke').textContent = jokes[Math.floor(Math.random()*jokes.length)];
+    </script>
+</body>
+</html>

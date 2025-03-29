@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ڈس کلیمر | مارک بریف</title>
+    <style>
+        :root {
+            --red: #e84118;
+            --yellow: #fbc531;
+            --green: #4cd137;
+            --blue: #00a8ff;
+            --font: 'Noto Nastaliq Urdu', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: #f5f6fa;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .header {
+            background: var(--red);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--yellow);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 0 black;
+        }
+
+        .nav {
+            background: var(--green);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            background: white;
+            color: var(--green);
+            transform: scale(1.1);
+        }
+
+        .nav .active {
+            background: var(--yellow);
+            color: black;
+            border: 2px dashed var(--red);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breaking-news {
+            background: var(--blue);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+
+        .disclaimer-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 3px dashed var(--red);
+        }
+
+        .warning-icon {
+            font-size: 4rem;
+            color: var(--red);
+            text-align: center;
+            margin: 1rem 0;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .disclaimer-point {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .disclaimer-point:last-child {
+            border-bottom: none;
+        }
+
+        .warning-btn {
+            display: block;
+            margin: 2rem auto 0;
+            padding: 1rem 2rem;
+            background: var(--red);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .warning-btn:hover {
+            background: var(--yellow);
+            color: black;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background: #2f3640;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">مارک بریف</h1>
+        <p class="tagline">جہاں حقیقت بھی افسانہ لگے!</p>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">ہوم</a>
+        <a href="mark-ki-news.html">مارک کی خبریں</a>
+        <a href="about-mark.html">مارک کون ہے؟</a>
+        <a href="disclaimer.html" class="active">ڈس کلیمر</a>
+    </nav>
+
+    <div class="container">
+        <div class="breaking-news">
+            🚨 ہوشیار: یہ صفحہ پڑھنے سے آپ کی ذہنی حالت پر اثر پڑ سکتا ہے! 🚨
+        </div>
+
+        <div class="disclaimer-card">
+            <div class="warning-icon">⚠️</div>
+            
+            <div class="disclaimer-point">
+                <h3 style="color: var(--red);">1. مارک کوئی حقیقی شخص نہیں</h3>
+                <p>مارک ایک فرضی کردار ہے جیسے آپ کا وہ دوست جو ہمیشہ "5 منٹ میں پہنچتا ہوں" کہہ کر 2 گھنٹے بعد آتا ہے۔ اگر آپ کو کہیں مارک نظر آئے تو فوراً اپنی نظر کا ٹیسٹ کروائیں!</p>
+            </div>
+
+            <div class="disclaimer-point">
+                <h3 style="color: var(--red);">2. تمام مواد محض طنز ہے</h3>
+                <p>ہماری ہر خبر 100% جھوٹی، 200% مزاحیہ اور 300% فضول ہے۔ اگر آپ کو کبھی کوئی خبر سچ لگ جائے تو براہ کرم ہمیں مطلع کریں تاکہ ہم اسے مزید جھوٹا بنا سکیں!</p>
+            </div>
+
+            <div class="disclaimer-point">
+                <h3 style="color: var(--red);">3. ذمہ داری سے انکار</h3>
+                <p>اگر آپ ہماری کسی خبر پر یقین کر کے کوئی بیوقوفی کر بیٹھیں (جیسے چاند پر جانے کی کوشش کرنا)، تو ہم اس کی ذمہ داری قبول نہیں کریں گے۔ ہم نے تو شروع میں ہی بتا دیا تھا!</p>
+            </div>
+
+            <div class="disclaimer-point">
+                <h3 style="color: var(--red);">4. مزید پڑھنے کے خطرات</h3>
+                <p>اس ویب سائٹ کو پڑھنے سے درج ذیل اثرات ہو سکتے ہیں:<br>
+                - ہنس ہنس کر پیٹ میں درد<br>
+                - چہرے پر مسکراہٹ کا مستقل نشان<br>
+                - حقیقی خبروں کو جھوٹ سمجھنے کا رجحان</p>
+            </div>
+
+            <button class="warning-btn" onclick="showFinalWarning()">آخری وارننگ دیکھیں</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">پرائیویسی پالیسی</a>
+            <a href="disclaimer.html">ڈس کلیمر</a>
+            <a href="sponsors.html">اسپانسرز</a>
+        </div>
+        <p>© 2024 مارک بریف - جھوٹ بولنا ہمارا آئینی حق ہے!</p>
+        <p id="random-joke"></p>
+    </footer>
+
+    <script>
+        function showFinalWarning() {
+            alert("⚠️ آخری انتباہ: اگر آپ نے یہ ڈس کلیمر پوری پڑھ لی ہے تو آپ بھی مارک جتنے ہی پاگل ہیں! ⚠️");
+        }
+
+        const jokes = [
+            "یہ ڈس کلیمر بھی جھوٹی ہو سکتی ہے!",
+            "ہماری پالیسی: پہلے جھوٹ بولو، بعد میں سوچیں!",
+            "نوٹ: اس ڈس کلیمر پر بھی یقین نہ کریں!"
+        ];
+        document.getElementById('random-joke').textContent = jokes[Math.floor(Math.random()*jokes.length)];
+    </script>
+</body>
+</html>

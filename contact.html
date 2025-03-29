@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رابطہ | مارک بریف</title>
+    <style>
+        :root {
+            --red: #e84118;
+            --yellow: #fbc531;
+            --green: #4cd137;
+            --blue: #00a8ff;
+            --font: 'Noto Nastaliq Urdu', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: #f5f6fa;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .header {
+            background: var(--red);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--yellow);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 0 black;
+        }
+
+        .nav {
+            background: var(--green);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            background: white;
+            color: var(--green);
+            transform: scale(1.1);
+        }
+
+        .nav .active {
+            background: var(--yellow);
+            color: black;
+            border: 2px dashed var(--red);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breaking-news {
+            background: var(--blue);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 3px dashed var(--red);
+        }
+
+        .contact-icon {
+            font-size: 4rem;
+            color: var(--red);
+            text-align: center;
+            margin: 1rem 0;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .contact-method {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .contact-method:last-child {
+            border-bottom: none;
+        }
+
+        .fake-form {
+            background: #f5f6fa;
+            padding: 2rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+            border: 2px dashed var(--yellow);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font);
+        }
+
+        .submit-btn {
+            display: block;
+            margin: 2rem auto 0;
+            padding: 1rem 2rem;
+            background: var(--red);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--yellow);
+            color: black;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background: #2f3640;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">مارک بریف</h1>
+        <p class="tagline">ہم سے رابطہ کرنا بھی ایک مذاق ہے!</p>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">ہوم</a>
+        <a href="mark-ki-news.html">مارک کی خبریں</a>
+        <a href="about-mark.html">مارک کون ہے؟</a>
+        <a href="contact.html" class="active">رابطہ</a>
+    </nav>
+
+    <div class="container">
+        <div class="breaking-news">
+            📞 ہم سے رابطہ کرنے کی کوشش نہ کریں، ہم آپ سے رابطہ کریں گے! 📞
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">📨</div>
+            
+            <div class="contact-method">
+                <h3 style="color: var(--red);">1. ای میل کے ذریعے (جو ہم نہیں پڑھیں گے)</h3>
+                <p><strong>ای میل:</strong> mark@brief.com (ہم روزانہ 5000 ای میلز وصول کرتے ہیں اور سب کو ڈیلیٹ کر دیتے ہیں)</p>
+            </div>
+
+            <div class="contact-method">
+                <h3 style="color: var(--red);">2. فون کے ذریعے (جو کبھی نہیں اٹھایا جاتا)</h3>
+                <p><strong>فون نمبر:</strong> 0300-MARK-BRI (یہ نمبر ایک کھلونے کی دکان کا ہے جو 1997 میں بند ہو گئی تھی)</p>
+            </div>
+
+            <div class="contact-method">
+                <h3 style="color: var(--red);">3. خط کے ذریعے (جو کبھی نہیں پہنچتا)</h3>
+                <p><strong>پتہ:</strong> مارک بریف ہیڈکوارٹرز، کالا پہاڑ، چاند (ہم نے کبھی وہاں جا کر چیک نہیں کیا)</p>
+            </div>
+
+            <div class="contact-method">
+                <h3 style="color: var(--red);">4. ذہنی رابطہ (ہمارا پسندیدہ طریقہ)</h3>
+                <p>اپنی آنکھیں بند کریں اور "مارک بریف" کو 100 بار ذہن میں دہرائیں۔ اگر آپ کو جواب نہ ملے تو ہم مصروف تھے!</p>
+            </div>
+
+            <div class="fake-form">
+                <h3 style="text-align: center; color: var(--blue);">رابطہ فارم (جو کبھی کام نہیں کرتا)</h3>
+                <div class="form-group">
+                    <label for="name">آپ کا نام (ضروری نہیں)</label>
+                    <input type="text" id="name" placeholder="اگر آپ کا نام یاد ہو تو">
+                </div>
+                <div class="form-group">
+                    <label for="email">آپ کا ای میل (ہم اسے فروخت کریں گے)</label>
+                    <input type="email" id="email" placeholder="no-reply@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">آپ کا پیغام (جو ہم نظرانداز کریں گے)</label>
+                    <textarea id="message" rows="5" placeholder="یہاں لکھیں... لیکن کیوں؟"></textarea>
+                </div>
+                <button class="submit-btn" onclick="fakeSubmit()">بھیجیں (نہیں بھیجیں گے)</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">پرائیویسی پالیسی</a>
+            <a href="disclaimer.html">ڈس کلیمر</a>
+            <a href="sponsors.html">اسپانسرز</a>
+        </div>
+        <p>© 2024 مارک بریف - ہم سے رابطہ کرنے کی کوشش کر کے آپ نے ہمارا مزید مذاق اڑایا!</p>
+        <p id="random-joke"></p>
+    </footer>
+
+    <script>
+        function fakeSubmit() {
+            alert("🤖 شکریہ! آپ کا پیغام کبھی نہیں پہنچے گا۔ ہم نے آپ کا ای میل 50 اشتہاری کمپنیوں کو فروخت کر دیا ہے! 🤖");
+        }
+
+        const jokes = [
+            "ہم سے رابطہ کرنے کا بہترین طریقہ: بالکل نہ کریں!",
+            "ہمارے کسٹمر سروس نمبر پر کال کریں: 1-800-نہ-کال-کریں",
+            "نوٹ: ہم سے رابطہ کرنا آپ کی زندگی کا سب سے بڑا وقت کا ضیاع ہوگا!"
+        ];
+        document.getElementById('random-joke').textContent = jokes[Math.floor(Math.random()*jokes.length)];
+    </script>
+</body>
+</html>

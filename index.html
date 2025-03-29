@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مارک کی خبریں | جہاں جھوٹ کو بھی شرم آجائے!</title>
+
+ <!-- Favicon Links -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- For fun browsers -->
+    <link rel="icon" type="image/gif" href="images/favicon.gif">
+    
+
+    <style>
+        /* === Base Styles (Consistent with Homepage) === */
+        :root {
+            --red: #e84118;
+            --yellow: #fbc531;
+            --green: #4cd137;
+            --blue: #00a8ff;
+            --font: 'Noto Nastaliq Urdu', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: #f5f6fa;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        /* === Header/Nav (Same as Homepage) === */
+        .header {
+            background: var(--red);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--yellow);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 0 black;
+        }
+
+        .nav {
+            background: var(--green);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            background: white;
+            color: var(--green);
+            transform: scale(1.1);
+        }
+
+        .nav .active {
+            background: var(--yellow);
+            color: black;
+            border: 2px dashed var(--red);
+        }
+
+        /* === Page-Specific Improvements === */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Breaking News Ticker */
+        .breaking-news {
+            background: var(--blue);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+
+        /* Satire Meter */
+        .satire-meter {
+            background: black;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin-left: 1rem;
+            font-size: 0.8rem;
+        }
+
+        /* Article Grid (Improved Symmetry) */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px) rotate(1deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-title {
+            color: var(--red);
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            background: var(--red);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: auto;
+            align-self: flex-start;
+            transition: all 0.3s;
+        }
+
+        .read-more:hover {
+            background: var(--yellow);
+            color: black;
+        }
+
+        /* Fake Poll Styling */
+        .fake-poll {
+            background: var(--yellow);
+            padding: 1.5rem;
+            border-radius: 10px;
+            grid-column: span 2;
+            text-align: center;
+            border: 3px dotted var(--red);
+        }
+
+        .poll-option {
+            background: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .poll-option:hover {
+            background: var(--blue);
+            color: white;
+        }
+
+        /* Footer (Same as Homepage) */
+        .footer {
+            background: #2f3640;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        /* === Mobile Responsiveness === */
+        @media (max-width: 768px) {
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .fake-poll {
+                grid-column: span 1;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="logo">مارک بریف</h1>
+        <p class="tagline">جہاں حقیقت بھی افسانہ لگے!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html">ہوم</a>
+        <a href="mark-ki-news.html" class="active">مارک کی خبریں</a>
+        <a href="about-mark.html">مارک کون ہے؟</a>
+        <a href="videos.html">ویڈیوز</a>
+        <a href="contact.html">مارک کو بلائیں</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breaking-news">
+            🚨 ہنگامی خبر: مارک نے چاند پر پاکستانی پرچم لہرا دیا! <span class="satire-meter">سچائی میٹر: 0.001%</span>
+        </div>
+
+        <!-- Article Grid -->
+        <div class="article-grid">
+            <!-- Article 1 -->
+            <article class="article-card">
+               
+		<img src="images/mark-scheme.webp" alt="Mark Ka New Scheme" class="article-img">
+                <div class="article-content">
+                    <h3 class="article-title">مارک نے ایجاد کر لی دنیا کی پہلی "سوتے وقت کام کرنے والی مشین" <span class="satire-meter">سچائی: -10%</span></h3>
+                    <p>"رات بھر سوتے رہیں، صبح دیکھیں کام خود بخود ہو چکا!" مارک کا دعویٰ جس پر خود مارک کو بھی یقین نہیں</p>
+                    <a href="#" class="read-more" onclick="showJoke('مشین کا راز: یہ تو صرف مارک کا بھانجا ہے جو رات کو کام کرتا ہے!')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <img src="images/mark-corruption.webp" alt="Mark VS Corruption" class="article-img">
+                <div class="article-content">
+                    <h3 class="article-title">مارک نے کرپشن ختم کرنے کا طریقہ ڈھونڈ لیا: "سب کو اتنے پیسے دے دو کہ چوراہے پر بھیک مانگنے آئیں" <span class="satire-meter">سچائی: 1%</span></h3>
+                    <p>ماہرین کا کہنا ہے کہ یہ پلان اتنا ہی کارآمد ہے جتنا کہ دوسرے تمام پلان مل کر</p>
+                    <a href="#" class="read-more" onclick="showJoke('بجٹ کا ذریعہ: پرنٹنگ پریس چلا کر نوٹ چھاپنا!')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                
+		<img src="images/mark-nasa.webp" alt="Mark NASA" class="article-img">
+                <div class="article-content">
+                    <h3 class="article-title">ناسا نے مارک کو چاند پر بھیجنے کا فیصلہ کیا: "کیونکہ زمین پر رہ کر یہ ہمیں پاگل کر دے گا" <span class="satire-meter">سچائی: 0.5%</span></h3>
+                    <p>مارک نے شرط لگائی کہ وہ چاند سے بھی بجلی کا بل بھیج کر دکھائے گا</p>
+                    <a href="#" class="read-more" onclick="showJoke('چاند پر پہلا پیغام: "یہاں بھی لوڈشیڈنگ ہے!"')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="article-card">
+                
+		<img src="images/mark-economy.webp" alt="Mark Economy" class="article-img">
+                <div class="article-content">
+                    <h3 class="article-title">مارک نے ملکی معیشت کا مسئلہ حل کر دیا: "ہر شہری کو ایک پرنٹنگ پریس دے دو" <span class="satire-meter">سچائی: 0%</span></h3>
+                    <p>ماہرین معاشیات نے کہا: "یہ تو ہم نے سوچا ہی نہیں تھا!"</p>
+                    <a href="#" class="read-more" onclick="showJoke('نوٹ: یہ خبر بھی اسی پرنٹنگ پریس پر چھپی ہے!')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+
+            <!-- Fake Poll -->
+            <div class="fake-poll">
+                <h3>مارک کا آج کا سوال:</h3>
+                <p>"اگر آپ کو ایک دن کے لیے وزیر بننا ہو تو آپ کونسی پہلی بیوقوفی کریں گے؟"</p>
+                <button class="poll-option" onclick="vote(1)">1. اپنے لیے خصوصی ہیلی کاپٹر خریدوں</button>
+                <button class="poll-option" onclick="vote(2)">2. پورے ملک میں صرف میرے لیے وائی فائی لگواؤں</button>
+                <button class="poll-option" onclick="vote(3)">3. مارک کو وزیراعظم بنا دوں</button>
+                <p id="poll-result" style="font-weight:bold; margin-top:1rem;"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">پرائیویسی پالیسی</a>
+            <a href="disclaimer.html">ڈس کلیمر</a>
+            <a href="sponsors.html">اسپانسرز</a>
+        </div>
+        <p>© 2024 مارک بریف - جھوٹ بولنا ہمارا آئینی حق ہے!</p>
+        <p id="random-joke"></p>
+    </footer>
+
+    <script>
+        // Interactive elements
+        function showJoke(joke) {
+            alert("😂 " + joke + " 😂");
+            return false;
+        }
+
+        function vote(option) {
+            const responses = [
+                "آپ میں وزیر بننے کی صلاحیت موجود ہے!",
+                "یہ تو ہر وزیر پہلے دن کرتا ہے!",
+                "آپ کو مارک نے ہی پیغام بھیجا ہے کیا؟"
+            ];
+            document.getElementById('poll-result').textContent = responses[option-1];
+        }
+
+        // Random joke generator
+        const jokes = [
+            "حقیقت: یہ ویب سائٹ بھی جھوٹ ہے!",
+            "مارک کا قول: جھوٹ بولو، پیسہ کماوٗ، اور چائے پیو!",
+            "نوٹ: اس ویب سائٹ پر موجود کسی بھی خبر پر یقین نہ کریں... بشمول اس نوٹ کا!"
+        ];
+        document.getElementById('random-joke').textContent = jokes[Math.floor(Math.random()*jokes.length)];
+
+        // Make satire meters blink
+        setInterval(() => {
+            document.querySelectorAll('.satire-meter').forEach(meter => {
+                meter.style.visibility = (meter.style.visibility == 'hidden' ? 'visible' : 'hidden');
+            });
+        }, 500);
+    </script>
+</body>
+</html>

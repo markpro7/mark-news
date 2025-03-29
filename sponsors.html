@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسپانسرز | مارک بریف</title>
+    <style>
+        :root {
+            --red: #e84118;
+            --yellow: #fbc531;
+            --green: #4cd137;
+            --blue: #00a8ff;
+            --font: 'Noto Nastaliq Urdu', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: #f5f6fa;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .header {
+            background: var(--red);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--yellow);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 0 black;
+        }
+
+        .nav {
+            background: var(--green);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            background: white;
+            color: var(--green);
+            transform: scale(1.1);
+        }
+
+        .nav .active {
+            background: var(--yellow);
+            color: black;
+            border: 2px dashed var(--red);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breaking-news {
+            background: var(--yellow);
+            color: black;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+
+        .sponsor-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 3px dashed var(--green);
+        }
+
+        .money-icon {
+            font-size: 4rem;
+            color: var(--green);
+            text-align: center;
+            margin: 1rem 0;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .sponsor-category {
+            margin-bottom: 2rem;
+        }
+
+        .sponsor-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .sponsor-item {
+            background: #f5f6fa;
+            padding: 1rem;
+            border-radius: 5px;
+            min-width: 200px;
+            text-align: center;
+            border: 1px dashed var(--yellow);
+            transition: all 0.3s;
+        }
+
+        .sponsor-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .sponsor-btn {
+            display: block;
+            margin: 2rem auto 0;
+            padding: 1rem 2rem;
+            background: var(--green);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .sponsor-btn:hover {
+            background: var(--yellow);
+            color: black;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background: #2f3640;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">مارک بریف</h1>
+        <p class="tagline">ہمارے اسپانسرز بھی جھوٹے ہیں!</p>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">ہوم</a>
+        <a href="mark-ki-news.html">مارک کی خبریں</a>
+        <a href="about-mark.html">مارک کون ہے؟</a>
+        <a href="sponsors.html" class="active">اسپانسرز</a>
+    </nav>
+
+    <div class="container">
+        <div class="breaking-news">
+            💰 ہمارے اسپانسرز آپ کے پیسے ضائع کرنے میں مدد کرتے ہیں! 💰
+        </div>
+
+        <div class="sponsor-card">
+            <div class="money-icon">💸</div>
+            
+            <div class="sponsor-category">
+                <h3 style="color: var(--green); text-align: center;">گولڈ اسپانسرز (جو ہمیں اصل میں پیسے دیتے ہیں)</h3>
+                <div class="sponsor-list">
+                    <div class="sponsor-item">
+                        <h4>بے وقوف بنانے والی دوائیں</h4>
+                        <p>"آپ کو پاگل بنانے کی گارنٹی!"</p>
+                    </div>
+                    <div class="sponsor-item">
+                        <h4>جھوٹے ڈپلومے</h4>
+                        <p>15 منٹ میں ڈاکٹر بن جائیں!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor-category">
+                <h3 style="color: var(--yellow); text-align: center;">سلور اسپانسرز (جو بس کہتے ہیں کہ دیتے ہیں)</h3>
+                <div class="sponsor-list">
+                    <div class="sponsor-item">
+                        <h4>مزاحیہ ٹوپیاں</h4>
+                        <p>ہر موقع کے لیے بیوقوفانہ ٹوپیاں</p>
+                    </div>
+                    <div class="sponsor-item">
+                        <h4>پانی میں چلنے والی گاڑیاں</h4>
+                        <p>کبھی ایجاد نہ ہونے والی ایجاد!</p>
+                    </div>
+                    <div class="sponsor-item">
+                        <h4>نظر نہ آنے والے جوتے</h4>
+                        <p>آپ کے پاؤں نظر آئیں گے، جوتے نہیں!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor-category">
+                <h3 style="color: var(--red); text-align: center;">برونز اسپانسرز (جو ہمیں پتا بھی نہیں کہ کون ہیں)</h3>
+                <div class="sponsor-list">
+                    <div class="sponsor-item">
+                        <h4>نامعلوم کمپنی</h4>
+                        <p>ہمیں خود بھی نہیں پتا یہ کیا کرتی ہے</p>
+                    </div>
+                    <div class="sponsor-item">
+                        <h4>کوئی ایک</h4>
+                        <p>شاید آپ کے پڑوسی</p>
+                    </div>
+                    <div class="sponsor-item">
+                        <h4>مارک کی نانی</h4>
+                        <p>وہ ہمیں بس پیار کرتی ہے</p>
+                    </div>
+                    <div class="sponsor-item">
+                        <h4>خلا سے آنے والے</h4>
+                        <p>ہم نے انہیں کبھی دیکھا نہیں</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="sponsor-btn" onclick="becomeSponsor()">اسپانسر بن جائیں!</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">پرائیویسی پالیسی</a>
+            <a href="disclaimer.html">ڈس کلیمر</a>
+            <a href="sponsors.html">اسپانسرز</a>
+        </div>
+        <p>© 2024 مارک بریف - ہم کسی بھی اسپانسر کو قبول کرتے ہیں، چاہے وہ حقیقی ہو یا نہ ہو!</p>
+        <p id="random-joke"></p>
+    </footer>
+
+    <script>
+        function becomeSponsor() {
+            alert("🎉 مبارک ہو! آپ اب ہمارے اسپانسر ہیں! بس ہمیں اپنا بینک اکاؤنٹ نمبر بھیج دیں (ہم آپ کو پیسے نہیں بھیجیں گے) 🎉");
+        }
+
+        const jokes = [
+            "ہمارے اسپانسرز کی فہرست بھی جھوٹی ہو سکتی ہے!",
+            "اسپانسر بن کر آپ بھی مارک جتنی شہرت حاصل کر سکتے ہیں!",
+            "نوٹ: ہماری اسپانسرشپ صرف تصوراتی رقم میں قبول کی جاتی ہے!"
+        ];
+        document.getElementById('random-joke').textContent = jokes[Math.floor(Math.random()*jokes.length)];
+    </script>
+</body>
+</html>

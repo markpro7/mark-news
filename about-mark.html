@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مارک کون ہے؟ | پاکستان کا سب سے بڑا جھوٹا!</title>
+    
+
+ <!-- Favicon Links -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- For fun browsers -->
+    <link rel="icon" type="image/gif" href="images/favicon.gif">
+    
+
+
+<style>
+        /* === Base Styles (Same as Homepage) === */
+        :root {
+            --red: #e84118;
+            --yellow: #fbc531;
+            --green: #4cd137;
+            --blue: #00a8ff;
+            --font: 'Noto Nastaliq Urdu', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: #f5f6fa;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        /* === Header/Nav (Same as Homepage) === */
+        .header {
+            background: var(--red);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--yellow);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 0 black;
+        }
+
+        .nav {
+            background: var(--green);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            background: white;
+            color: var(--green);
+            transform: scale(1.1);
+        }
+
+        .nav .active {
+            background: var(--yellow);
+            color: black;
+            border: 2px dashed var(--red);
+        }
+
+        /* === Page-Specific Styles === */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breaking-news {
+            background: var(--blue);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+
+        /* Bio Card */
+        .bio-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .bio-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--yellow);
+            margin: 0 auto 1rem;
+            display: block;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            width: 20px;
+            height: 2px;
+            background: var(--red);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--yellow);
+            transform: translateY(-50%);
+            border: 3px solid var(--red);
+        }
+
+        /* Awards Grid */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .award-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .award-card:hover {
+            transform: translateY(-5px) rotate(2deg);
+        }
+
+        .award-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--red);
+        }
+
+        /* Footer (Same as Homepage) */
+        .footer {
+            background: #2f3640;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        /* === Mobile Responsiveness === */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .timeline-item::before,
+            .timeline-item::after {
+                display: none;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="logo">مارک بریف</h1>
+        <p class="tagline">جہاں حقیقت بھی افسانہ لگے!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html">ہوم</a>
+        <a href="mark-ki-news.html">مارک کی خبریں</a>
+        <a href="about-mark.html" class="active">مارک کون ہے؟</a>
+        <a href="videos.html">ویڈیوز</a>
+        <a href="contact.html">مارک کو بلائیں</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breaking-news">
+            🚨 انکشاف: مارک حقیقت میں کبھی پیدا ہی نہیں ہوا! یہ تو ایک خیال ہے جو ہم سب کے دلوں میں رہتا ہے 🚨
+        </div>
+
+        <!-- Bio Card -->
+        <div class="bio-card">
+            
+	<img src="images/mark-cartoon.webp" alt="Mark Ka Cartoon" class="bio-img">
+            <h2 style="color: var(--red);">مارک کا "سچا" تعارف</h2>
+            <p><strong>پیدائش:</strong> 1 اپریل 1990 (جیسا کہ وہ خود بتاتا ہے)</p>
+            <p><strong>پیشہ:</strong> پیشہ ور جھوٹا، نیم پیشہ ور چائے پینے والا</p>
+            <p><strong>مشہور قول:</strong> "اگر آپ میری بات پر یقین کریں گے تو میں اگلا جھوٹ تیار کرنے میں مصروف ہوں گا"</p>
+            <button onclick="showJoke('حقیقت: مارک کا یہ تعارف بھی جھوٹ پر مبنی ہے!')" 
+                    style="background: var(--red); color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; margin-top: 1rem;">
+                سچ جاننے کے لیے کلک کریں
+            </button>
+        </div>
+
+        <!-- Timeline -->
+        <h2 style="text-align: center; color: var(--red);">مارک کی جعلی ٹائم لائن</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>2005</h3>
+                <p>پہلا جھوٹ بولا: "میں نے ہوم ورک کر لیا ہے استاد جی"</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2010</h3>
+                <p>پہلی بار پکڑے گئے: "نہیں امی میں نے تو چاکلیٹ ہی نہیں کھائی" (منہ پر چاکلیٹ لگی ہوئی تھی)</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2020</h3>
+                <p>پروفیشنل جھوٹا بن گئے: مارک بریف کی بنیاد رکھی</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2024</h3>
+                <p>عالمی ریکارڈ: 24 گھنٹے میں 24,000 جھوٹ بولنے کا ریکارڈ</p>
+            </div>
+        </div>
+
+        <!-- Awards -->
+        <h2 style="text-align: center; color: var(--red);">مارک کے "حقیقی" اعزازات</h2>
+        <div class="awards-grid">
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                <h3>گینز بک آف ورلڈ ریکارڈز</h3>
+                <p>سب سے زیادہ جھوٹ بولنے کا ریکارڈ</p>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-medal"></i></div>
+                <h3>نوبل انعام (جعلی قسم)</h3>
+                <p>بہترین چائے پینے والا</p>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-award"></i></div>
+                <h3>پاکستان کا اعزاز</h3>
+                <p>ایک ہی وقت میں 10 الگ الگ کہانیاں بنانے کا اعزاز</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">پرائیویسی پالیسی</a>
+            <a href="disclaimer.html">ڈس کلیمر</a>
+            <a href="sponsors.html">اسپانسرز</a>
+        </div>
+        <p>© 2024 مارک بریف - جھوٹ بولنا ہمارا آئینی حق ہے!</p>
+        <p id="random-joke"></p>
+    </footer>
+
+    <script>
+        // Interactive elements
+        function showJoke(joke) {
+            alert("😂 " + joke + " 😂");
+        }
+
+        // Random joke generator
+        const jokes = [
+            "حقیقت: یہ صفحہ بھی جھوٹ پر مبنی ہے!",
+            "مارک کی اصل عمر کا راز: ہر سال وہ اپنی عمر 1 سال کم بتاتا ہے!",
+            "مارک کا خواب: ایک ایسا ملک جہاں جھوٹ بولنا فرض ہو!"
+        ];
+        document.getElementById('random-joke').textContent = jokes[Math.floor(Math.random()*jokes.length)];
+
+        // Make timeline items interactive
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    item.style.transform = '';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مارک کی خبریں | جہاں جھوٹ کو بھی شرم آجائے!</title>
+    
+
+ <!-- Favicon Links -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- For fun browsers -->
+    <link rel="icon" type="image/gif" href="images/favicon.gif">
+    
+
+<style>
+        :root {
+            --red: #e84118;
+            --yellow: #fbc531;
+            --green: #4cd137;
+            --blue: #00a8ff;
+            --font: 'Noto Nastaliq Urdu', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: #f5f6fa;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .header {
+            background: var(--red);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--yellow);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 0 black;
+        }
+
+        .nav {
+            background: var(--green);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            background: white;
+            color: var(--green);
+            transform: scale(1.1);
+        }
+
+        .nav .active {
+            background: var(--yellow);
+            color: black;
+            border: 2px dashed var(--red);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breaking-news {
+            background: var(--blue);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px) rotate(1deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-title {
+            color: var(--red);
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .satire-meter {
+            background: black;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .read-more {
+            display: inline-block;
+            background: var(--red);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: auto;
+            align-self: flex-start;
+            transition: all 0.3s;
+        }
+
+        .read-more:hover {
+            background: var(--yellow);
+            color: black;
+        }
+
+        .footer {
+            background: #2f3640;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">مارک بریف</h1>
+        <p class="tagline">جہاں حقیقت بھی افسانہ لگے!</p>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">ہوم</a>
+        <a href="mark-ki-news.html" class="active">مارک کی خبریں</a>
+        <a href="about-mark.html">مارک کون ہے؟</a>
+        <a href="disclaimer.html">ڈس کلیمر</a>
+    </nav>
+
+    <div class="container">
+        <div class="breaking-news">
+            🚨 ہنگامی خبر: مارک نے چاند پر پاکستانی پرچم لہرا دیا! <span class="satire-meter">سچائی: 0.001%</span>
+        </div>
+
+        <div class="article-grid">
+            <article class="article-card">               
+		<img src="images/mark-space-program.webp" alt="Mark Space Program" class="article-img">
+                <div class="article-content">
+                    <h3 class="article-title">مارک نے شروع کر دیا پاکستان کا خلائی پروگرام <span class="satire-meter">سچائی: -5%</span></h3>
+                    <p>"ہم نے راکٹ میں LPG سلنڈر لگا دیا ہے، ابھی تک دھماکہ نہیں ہوا!" - مارک</p>
+                    <a href="#" class="read-more" onclick="showJoke('حقیقت: یہ تو بس اوور ہیڈ واٹر ٹینک تھا جسے رنگ کر خلائی جہاز بنا دیا!')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="images/mark-economy.webp" alt="Mark Economy" class="article-img">
+                <div class="article-content">
+                    <h3 class="article-title">مارک نے ملکی معیشت کا مسئلہ حل کر دیا <span class="satire-meter">سچائی: 0.1%</span></h3>
+                    <p>"ہر شہری کو ایک پرنٹنگ پریس دے دو، خود نوٹ چھاپ لیں گے!" - مارک کا تاریخی بیان</p>
+                    <a href="#" class="read-more" onclick="showJoke('ماہرین معاشیات نے کہا: "یہ تو ہم نے سوچا ہی نہیں تھا!"')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="images/mark-traffic.webp" alt="Mark Traffic" class="article-img">
+                <div class="article-content">
+                    <h3 class="article-title">مارک نے کراچی ٹریفک کا حل ڈھونڈ لیا <span class="satire-meter">سچائی: 0%</span></h3>
+                    <p>"گاڑیاں ہوا میں اڑائیں گے!" مارک نے ہیلی کاپٹر چلانے والوں کو نوٹس جاری کر دیے</p>
+                    <a href="#" class="read-more" onclick="showJoke('حقیقت: مارک خود تو گاڑی چلانا بھی نہیں جانتا!')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+<!-- Example for weather article -->
+		<img src="images/mark-weather.webp" alt="Mark Weather" class="article-img">
+                <div class="article-content">
+                    <h3 class="article-title">مارک نے موسم کو کنٹرول کرنے کا دعویٰ کیا <span class="satire-meter">سچائی: -100%</span></h3>
+                    <p>"کل میں نے خود بارش برسائی تھی، بس پانی کا پائپ چھت پر رکھ دیا تھا!"</p>
+                    <a href="#" class="read-more" onclick="showJoke('پڑوسی نے کہا: یہ تو میرے گھر کی چھت سے لیک ہو رہا تھا!')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="images/mark-diplomacy.webp" alt="Mark Diplomacy" class="article-img">                
+		<div class="article-content">
+                    <h3 class="article-title">مارک نے امریکہ کو ہرا دیا! <span class="satire-meter">سچائی: 0.0001%</span></h3>
+                    <p>"چپس کی دوکان پر ہار مانگ لی، اب وہ ہمارے چیٹ کے پیسے نہیں مانگے گا"</p>
+                    <a href="#" class="read-more" onclick="showJoke('حقیقت: یہ تو بس لانڈری کا بل تھا!')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="images/mark-education.webp" alt="Mark Education" class="article-img">
+                <div class="article-content">
+                    <h3 class="article-title">مارک نے تعلیمی نظام میں انقلاب لے آیا <span class="satire-meter">سچائی: 1%</span></h3>
+                    <p>"اب امتحانات میں نقل کرنا جائز ہوگا، بلکہ فرض ہوگا!" - مارک کا اعلان</p>
+                    <a href="#" class="read-more" onclick="showJoke('اساتذہ نے کہا: ہم تو پہلے ہی یہی سمجھتے تھے!')">مکمل جھوٹ پڑھیں</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">پرائیویسی پالیسی</a>
+            <a href="disclaimer.html">ڈس کلیمر</a>
+            <a href="sponsors.html">اسپانسرز</a>
+        </div>
+        <p>© 2024 مارک بریف - جھوٹ بولنا ہمارا آئینی حق ہے!</p>
+        <p id="random-joke"></p>
+    </footer>
+
+    <script>
+        function showJoke(joke) {
+            alert("😂 " + joke + " 😂");
+            return false;
+        }
+
+        const jokes = [
+            "حقیقت: یہ ویب سائٹ بھی جھوٹ ہے!",
+            "مارک کا قول: جھوٹ بولو، پیسہ کماوٗ، اور چائے پیو!",
+            "نوٹ: اس ویب سائٹ پر موجود کسی بھی خبر پر یقین نہ کریں... بشمول اس نوٹ کا!"
+        ];
+        document.getElementById('random-joke').textContent = jokes[Math.floor(Math.random()*jokes.length)];
+    </script>
+</body>
+</html>
